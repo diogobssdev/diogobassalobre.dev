@@ -1,6 +1,6 @@
 import { Component } from "@angular/core"
 import { CommonModule } from "@angular/common"
-import { ReactiveFormsModule, type FormBuilder, type FormGroup, Validators } from "@angular/forms"
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from "@angular/forms"
 import {
   LucideAngularModule,
   Mail,
