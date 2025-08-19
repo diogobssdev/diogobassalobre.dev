@@ -1,26 +1,32 @@
-# 🚀 Portfólio Angular - Diogo Bassalobre
+# 🚀 Portfólio Angular/HTML/CSS/JS - Diogo Bassalobre
 
-Um portfólio moderno e responsivo desenvolvido com Angular 17+, TypeScript e Tailwind CSS.
+Um portfólio moderno e responsivo desenvolvido com Angular 17+, HTML5, CSS3 e JavaScript vanilla.
 
 ## 🌟 Características
 
 - ⚡ **Angular 17+** com Standalone Components
-- 🎨 **Tailwind CSS** para estilização responsiva
-- 📱 **Design Responsivo** para todos os dispositivos
-- 🔥 **Lazy Loading** para otimização de performance
+- ⚡ **HTML5, CSS3 e JavaScript** puro - sem frameworks
+- 🎨 **Design Moderno** com gradientes e animações suaves
+- 📱 **Totalmente Responsivo** para todos os dispositivos
+- 🔥 **Performance Otimizada** com JavaScript vanilla
 - 📝 **Formulários Reativos** com validação
-- 🎯 **SEO Otimizado** com meta tags
+- 📝 **Formulário de Contato** com validação completa
+- 🎯 **SEO Friendly** com meta tags otimizadas
 - ♿ **Acessível** seguindo boas práticas
 - 🚀 **Deploy Automático** no GitHub Pages
+- 📧 **Sistema de Contato** funcional
+- 📧 **Formulário de Contato** com validação
+- 🎨 **Animações CSS** e transições suaves
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Frontend**: Angular 17+, TypeScript, Tailwind CSS
-- **Ícones**: Lucide Angular
+- **Frontend**: Angular 17+, HTML5, CSS3, JavaScript ES6+
+- **Ícones**: Lucide Angular, Font Awesome
 - **Formulários**: Angular Reactive Forms
 - **Roteamento**: Angular Router
 - **Build**: Angular CLI
 - **Deploy**: GitHub Pages com GitHub Actions
+- **Tipografia**: Google Fonts (Inter)
 
 ## 📦 Instalação
 
@@ -45,31 +51,7 @@ npm start
 http://localhost:4200
 \`\`\`
 
-## 🚀 Deploy no GitHub Pages
-
-### Configuração Automática (Recomendado)
-
-1. **Fork ou clone este repositório**
-
-2. **Configure o GitHub Pages**
-   - Vá para Settings > Pages
-   - Source: GitHub Actions
-   - O deploy será automático a cada push na branch `main`
-
-3. **Acesse seu site**
-   - URL: `https://seu-usuario.github.io/angular-portfolio/`
-
-### Deploy Manual
-
-\`\`\`bash
-# Build para produção
-npm run build:prod
-
-# Deploy manual (opcional)
-npm run deploy
-\`\`\`
-
-## 📁 Estrutura do Projeto
+## 📦 Estrutura do Projeto
 
 \`\`\`
 src/
@@ -90,6 +72,46 @@ src/
 └── index.html              # HTML principal
 \`\`\`
 
+\`\`\`
+├── index.html              # Página principal
+├── css/
+│   └── style.css          # Estilos principais
+├── js/
+│   ├── main.js           # JavaScript principal
+│   └── data.js           # Dados dos projetos
+├── .github/
+│   └── workflows/
+│       └── deploy.yml    # GitHub Actions
+└── README.md
+\`\`\`
+
+## 🚀 Como usar
+
+### 1. Clone o repositório
+\`\`\`bash
+git clone https://github.com/seu-usuario/portfolio.git
+cd portfolio
+\`\`\`
+
+### 2. Personalize o conteúdo
+- Edite `index.html` com suas informações
+- Atualize `js/data.js` com seus projetos
+- Modifique `css/style.css` para personalizar o design
+
+### 3. Deploy no GitHub Pages
+1. Faça push para o repositório
+2. Vá em Settings > Pages
+3. Selecione "GitHub Actions" como source
+4. O site será deployado automaticamente
+
+## 📱 Páginas/Seções Incluídas
+
+- **🏠 Home**: Apresentação, hero section e call-to-actions
+- **👤 Sobre**: História pessoal, experiência e formação
+- **⚡ Habilidades**: Skills técnicas com barras de progresso animadas
+- **💼 Projetos**: Portfólio com filtros interativos
+- **📧 Contato**: Formulário funcional e informações de contato
+
 ## 🎨 Personalização
 
 ### Cores e Tema
@@ -109,6 +131,15 @@ theme: {
 }
 \`\`\`
 
+Edite as variáveis CSS em `css/style.css`:
+\`\`\`css
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #8b5cf6;
+    /* ... outras cores */
+}
+\`\`\`
+
 ### Informações Pessoais
 Atualize os dados pessoais nos componentes:
 
@@ -118,22 +149,24 @@ Atualize os dados pessoais nos componentes:
 4. **Projetos**: `src/app/pages/projects/projects.component.ts`
 5. **Contato**: `src/app/pages/contact/contact.component.ts`
 
-### SEO
-Atualize as meta tags em `src/index.html`:
+Edite diretamente no `index.html`:
+- Nome e título
+- Descrições
+- Links de redes sociais
+- Informações de contato
 
-\`\`\`html
-<title>Seu Nome - Desenvolvedor Full Stack</title>
-<meta name="description" content="Sua descrição personalizada">
-<meta property="og:title" content="Seu Nome - Desenvolvedor Full Stack">
+### Projetos
+Atualize o array `projectsData` em `js/data.js`:
+\`\`\`javascript
+const projectsData = [
+    {
+        id: 1,
+        title: "Seu Projeto",
+        description: "Descrição do projeto...",
+        // ... outras propriedades
+    }
+];
 \`\`\`
-
-## 📱 Páginas Incluídas
-
-- **🏠 Home**: Apresentação, hero section e call-to-actions
-- **👤 Sobre**: História pessoal, experiência e formação
-- **⚡ Habilidades**: Skills técnicas com barras de progresso
-- **💼 Projetos**: Portfólio com filtros e projetos destacados
-- **📧 Contato**: Formulário funcional e informações de contato
 
 ## 🔧 Scripts Disponíveis
 
@@ -146,9 +179,31 @@ npm run lint       # Verificar código
 npm run deploy     # Deploy manual para GitHub Pages
 \`\`\`
 
+## ⚡ Funcionalidades
+
+### JavaScript
+- ✅ Navegação suave entre seções
+- ✅ Menu mobile responsivo
+- ✅ Filtros de projetos interativos
+- ✅ Animações de scroll
+- ✅ Validação de formulário
+- ✅ Modal de sucesso
+- ✅ Barras de progresso animadas
+- ✅ Scroll to top
+- ✅ Navegação por teclado
+
+### CSS
+- ✅ Flexbox e CSS Grid
+- ✅ Animações e transições
+- ✅ Gradientes modernos
+- ✅ Sombras e efeitos
+- ✅ Design responsivo
+- ✅ Variáveis CSS
+- ✅ Media queries
+
 ## 🌐 Demo
 
-Veja o portfólio em ação: [https://seu-usuario.github.io/angular-portfolio/](https://seu-usuario.github.io/angular-portfolio/)
+Veja o portfólio em ação: [https://seu-usuario.github.io/angular-portfolio/](https://seu-usuario.github.io/angular-portfolio/) e [https://seu-usuario.github.io/portfolio/](https://seu-usuario.github.io/portfolio/)
 
 ## 📄 Licença
 

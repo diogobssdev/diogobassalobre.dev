@@ -1,9 +1,0 @@
-{
-  "recommendations": [
-    "angular.ng-template",
-    "ms-vscode.vscode-typescript-next",
-    "bradlc.vscode-tailwindcss",
-    "esbenp.prettier-vscode",
-    "ms-vscode.vscode-json"
-  ]
-}
