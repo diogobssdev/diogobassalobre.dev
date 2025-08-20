@@ -1,0 +1,302 @@
+/* Configurações Globais e Variáveis de Cor */
+:root {
+    --cor-primaria: #0a192f;      /* Azul marinho escuro */
+    --cor-secundaria: #112240;   /* Azul um pouco mais claro */
+    --cor-texto: #ccd6f6;         /* Cinza azulado claro */
+    --cor-texto-secundario: #8892b0;
+    --cor-destaque: #64ffda;      /* Verde menta/ciano */
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+h1, h2 {
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--cor-destaque);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Header e Navegação */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Seção Início (Hero) */
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#inicio h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem); /* Fonte responsiva */
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    color: var(--cor-texto-secundario);
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+.social-links {
+    margin: 25px 0;
+}
+
+.social-links a {
+    color: var(--cor-texto);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--cor-destaque);
+    transform: translateY(-5px);
+}
+
+/* Botão Principal */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid var(--cor-destaque);
+    color: var(--cor-destaque);
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Seção Sobre */
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--cor-destaque);
+}
+
+.sobre-content p {
+    line-height: 1.7;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px;
+}
+
+/* Seção Habilidades */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.habilidade-card {
+    background-color: var(--cor-secundaria);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 3px solid var(--cor-destaque);
+}
+
+.habilidade-card h3 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: var(--cor-texto);
+}
+
+.habilidade-card ul {
+    list-style: none;
+}
+
+.habilidade-card li {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.habilidade-card i {
+    color: var(--cor-destaque);
+    font-size: 1.2rem;
+}
+
+/* Seção Projetos */
+.projeto-card {
+    background-color: var(--cor-secundaria);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+}
+
+.projeto-card h3 {
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.projeto-card p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tecnologias span {
+    background-color: var(--cor-primaria);
+    color: var(--cor-destaque);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+/* Seção Contato */
+#contato {
+    text-align: center;
+}
+
+#contato p {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    color: var(--cor-texto-secundario);
+}
+
+.email-link {
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 768px) {
+    .container {
+        padding: 60px 20px;
+    }
+    
+    nav ul {
+        display: none; /* Em um projeto real, aqui entraria um menu hamburguer */
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: 1fr;
+    }
+}
